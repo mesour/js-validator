@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+</head>
+<body>
+
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+	<script src="../dist/mesour.validator.js"></script>
+
+	<script>
+		var type = mesour.validator.type;
+		console.log(mesour.validator.validate(type.FILLED, ''));
+		console.log(mesour.validator.validate(type.EMAIL, 'john.doe@example.com'));
+		console.log(mesour.validator.validate(type.NUMERIC, '10'));
+		console.log(mesour.validator.validate(type.NUMERIC, '10.65'));
+		console.log(mesour.validator.validate(type.RANGE, '20', [null, 20]));
+		console.log(mesour.validator.validate(type.RANGE, '1', [2, 20]));
+		console.log(mesour.validator.validate(type.RANGE, '30', [null, 20]));
+	</script>
+
+</body>
+</html>
